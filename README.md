@@ -1,18 +1,33 @@
 # ChatGPT-vs-AntiSybil-Legos
 An analysis of existing anti sybil legos within the Gitcoin protocol against malicious use of AI algorithims like ChatGPT
 
-## 1. Address Correlation Lego
+
+
+   
+
+ 
+
+
+ 
+
+![Untitled presentation](https://user-images.githubusercontent.com/66562380/234943169-de651741-9112-4d61-95d4-d3d01a8572f6.png)
+
+
+
+
+
+### 1. Address Correlation Lego
 
 How it works: The "address correlation Lego" is a pattern-identification Lego that is intended to be used against previously known sybil patterns that will be stored in a readable format (currently using a pandas dataframe). Its purpose is to judge the correlation between the activities of an address and those of sybil addresses using the Spearman's rank correlation coefficient.
 
 How it can be exploited:
-  * Limited detection capabilities: The protocol relies solely on previously known sybil patterns stored in a readable format, which may not capture all possible patterns or new and evolving sybil techniques used by malicious chatbots. Malicious use of chatbots like ChatGPT can potentially exploit this by employing novel or sophisticated sybil techniques that are not yet known or detected by the protocol.
+  * Limited detection capabilities: This Lego relies solely on previously known sybil patterns stored in a readable format, which may not capture all possible patterns or new and evolving sybil techniques used by malicious chatbots. Malicious use of chatbots like ChatGPT can potentially exploit this by employing novel or sophisticated sybil techniques that are not yet known or detected by the protocol.
   
-  * Lack of scalability: The protocol may rely on a pandas dataframe, which may not be scalable or efficient in handling large amounts of data. This could potentially limit the protocol's ability to process and analyze data in real-time, especially in a high-transaction environment. Malicious chatbots cam potentially exploit this by overwhelming the system with a large number of transactions or activities to evade detection.
+  * Lack of scalability: This Lego reliance on a pandas dataframe, may not be scalable or efficient in handling large amounts of data. This can potentially limit the protocol's ability to process and analyze data in real-time, especially in a high-transaction environment. One can exploit this particular vulnerability by overwhelming the system with a large number of transactions or activities to evade detection.
  
- * False positives or false negatives: The accuracy of pattern identification using Spearman's rank correlation coefficient may not be 100% accurate. There may be false positives where legitimate addresses are flagged as sybil, or false negatives where malicious addresses are not flagged. Malicious chatbots could potentially exploit this by either evading detection or triggering false positives that result in legitimate addresses being wrongly flagged.
+ * False positives or false negatives: The accuracy of pattern identification using Spearman's rank correlation coefficient may not be 100% accurate. A malicious use of ChatGPT can exploit this in two ways by either evading detection generating false negatives or triggering false positives that result in legitimate addresses being wrongly flagged.
  
- * Lack of real-time detection: The protocol may not have real-time monitoring capabilities, and it may rely on previously known sybil patterns, which may not be updated in real-time. Malicious chatbots could potentially exploit this by using new or updated sybil techniques that are not yet known or detected by the protocol.
+ * Lack of real-time detection: Once again this Lego reliance on previously known sybil patterns, means it likely doesn't have real-time monitoring capabilities. Malicious chatbots can exploit this by using new or updated sybil techniques that are not yet known or detected by the Lego.
 
 
 ## 2. FLAGGED ACTIVITY
@@ -20,13 +35,13 @@ How it can be exploited:
 How it works: Returns whether address is in close association with addresses flagged as phishing/scam on Etherscan (send or receive event; last 365 days).
 
 How it can be exploited: 
- * Lack of real-time data: The protocol may rely on data from Etherscan, which may not be real-time or up-to-date. Malicious chatbots could potentially exploit this by performing malicious activities that are not yet flagged on Etherscan, or by using addresses that have not yet been associated with phishing/scam events.
+ * Lack of real-time data: The protocol relies on data from Etherscan, which may not be real-time or up-to-date. A malicious use of ChatGPT can exploit this by performing malicious activities that are not yet flagged on Etherscan, or by using addresses that have not yet been associated with phishing/scam events.
  
- * False positives or false negatives: The accuracy of the phishing/scam flagging on Etherscan may not be 100% accurate. There may be false positives where legitimate addresses are flagged as phishing/scam, or false negatives where malicious addresses are not flagged. Malicious chatbots could potentially exploit this by either evading detection or triggering false positives that result in legitimate addresses being wrongly flagged.
+ * False positives or false negatives: The accuracy of the phishing/scam flagging on Etherscan may not be 100% accurate. There may be false positives where legitimate addresses are flagged as phishing/scam, or false negatives where malicious addresses are not flagged. Malicious chatbot can as well exploit this by either evading detection or triggering false positives that result in legitimate addresses being wrongly flagged.
 
- * Lack of comprehensive phishing/scam detection: The protocol may rely solely on Etherscan for phishing/scam detection, which may not capture all possible phishing/scam activities or new and evolving types of scams. Malicious chatbots could potentially exploit this by employing novel or sophisticated phishing/scam techniques that are not yet flagged on Etherscan.
+ * Lack of comprehensive phishing/scam detection: The protocol may rely solely on Etherscan for phishing/scam detection, which may not capture all possible phishing/scam activities or new and evolving types of scams. Malicious chatbots can potentially exploit this by employing novel or sophisticated phishing/scam techniques that are not yet flagged on Etherscan.
  
- * Limited scope of detection: The protocol may only consider send or receive events within the last 365 days, which may not capture all possible phishing/scam activities that could have occurred beyond that timeframe. Malicious chatbots could potentially exploit this by using addresses that have been involved in phishing/scam activities prior to the last 365 days.
+ * Limited scope of detection: The protocol may only consider send or receive events within the last 365 days, which may not capture all possible phishing/scam activities that could have occurred beyond that timeframe. An exploit can maneuver this loophole by using addresses that have been involved in phishing/scam activities prior to the last 365 days.
 
 
 ## 3. SCRIPT CALL TO API
@@ -35,11 +50,11 @@ How it works: Imitate Bankless' use of "bot-label" for any python, curl, etc. di
 
 How it can be exploited: 
 
- * "Bot-label" manipulation: Malicious chatbots may be able to manipulate the "bot-label" or forge it to gain unauthorized access to the Passport API. This could allow them to perform actions that are not allowed or intended, leading to potential misuse or abuse of the system.
+ * "Bot-label" manipulation: A malicious use of ChatGPT can manipulate the "bot-label" or forge it to gain unauthorized access to the Passport API. This allows the user to perform actions that are not allowed or intended, leading to potential misuse or abuse of the system.
  
  * Lack of comprehensive bot detection mechanisms: The "bot-label" approach may not be foolproof in accurately identifying and detecting malicious chatbots. Sophisticated chatbots may be able to circumvent or bypass the "bot-label" detection, allowing them to gain unauthorized access.
  
- * Lack of multifactor authentication: The reliance solely on the "bot-label" without additional authentication mechanisms, such as multifactor authentication or token-based authentication, could increase the vulnerability of the protocol to malicious chatbots.
+ * Lack of multifactor authentication: The reliance solely on the "bot-label" without additional authentication mechanisms, such as multifactor authentication or token-based authentication, also increases the vulnerability of the protocol to malicious chatbots.
  
  * Limited security measures: If the protocol does not have robust security measures in place to monitor and detect suspicious or malicious activities, it may be more susceptible to attacks from malicious chatbots.
  
@@ -50,9 +65,9 @@ How it works: Determines whether user donation array is within-range for statist
 
 How it can be exploited: 
 
- *  Manipulation of donation array: Malicious chatbots could potentially manipulate the donation array to fall within the statistical averages of the community, even if the donations are not genuine or do not reflect the true intent of the user. This could lead to inaccurate results and manipulation of the protocol.
+ *  Manipulation of donation array: Malicious chatbots can potentially manipulate the donation array to fall within the statistical averages of the community, even if the donations are not genuine or do not reflect the true intent of the user. This can lead to inaccurate results and manipulation of the protocol.
 
- * Automated donations: Malicious chatbots could make automated donations to manipulate the donation array and artificially influence the statistical averages of the community. This could lead to unfair results and manipulation of the protocol.
+ * Automated donations: Malicious chatbots can make automated donations to manipulate the donation array and artificially influence the statistical averages of the community. This could lead to unfair results and manipulation of the protocol.
  
  * False positives/negatives: The protocol may generate false positives or false negatives in determining whether the user's donation array falls within the statistical averages of the community. Malicious chatbots could potentially exploit these false results to gain an unfair advantage or to bypass detection.
 
@@ -65,11 +80,11 @@ How it works: Upala is a decentralized digital identity. The protocol generates 
 
 How it can be exploited: 
 
- * Fake identity creation: Malicious chatbots could potentially create fake identities on the Upala protocol, thereby undermining the integrity of the social identity verification process.
+ * Fake identity creation: Malicious chatbots can potentially create fake identities on the Upala protocol, thereby undermining the integrity of the social identity verification process.
 
- * Manipulation of social identity data: Malicious chatbots could manipulate social identity data or forge proof of identity, leading to inaccurate or fraudulent verification results.
+ * Manipulation of social identity data: Malicious chatbots can manipulate social identity data or forge proof of identity, leading to inaccurate or fraudulent verification results.
 
- * Collusion with real users: Malicious chatbots could collude with real users to fraudulently verify fake identities, leading to unfair distribution of trust scores and reputation within the Upala protocol.
+ * Collusion with real users: A malicious user of ChatGPT can collude with real users to fraudulently verify fake identities, leading to unfair distribution of trust scores and reputation within the Upala protocol.
 
  * Sybil attacks: Malicious chatbots could create multiple fake identities and gain undue influence in the social identity verification process, leading to manipulation of trust scores and reputation.
 
@@ -80,13 +95,13 @@ How it works: The Proof of Attendance Protocol turns events or hackathons into c
 
 How it can be exploited: 
 
- * Fake event submissions: Malicious chatbots could potentially create fake events or hackathons and generate fake proof of attendance to collect POAP tokens, thereby undermining the integrity of the protocol.
+ * Fake event submissions: Malicious chatbots can potentially create fake events or hackathons and generate fake proof of attendance to collect POAP tokens, thereby undermining the integrity of the protocol.
 
- * Sybil attacks: Malicious chatbots could create multiple fake identities and participate in events or hackathons, thereby gaining multiple POAP tokens and manipulating the rewards or incentives associated with the protocol.
+ * Sybil attacks: Malicious chatbots can create multiple fake identities and participate in events or hackathons, thereby gaining multiple POAP tokens and manipulating the rewards or incentives associated with the protocol.
 
- * Manipulation of attendance data: Malicious chatbots could manipulate attendance data or forge proof of attendance to earn POAP tokens without actually participating in the events or hackathons, leading to inaccurate or fraudulent token distribution.
+ * Manipulation of attendance data: Malicious chatbots can manipulate attendance data or forge proof of attendance to earn POAP tokens without actually participating in the events or hackathons, leading to inaccurate or fraudulent token distribution.
 
- * Collusion with real users: Malicious chatbots could collude with real users to fraudulently earn POAP tokens by providing fake proof of attendance or manipulating event data, leading to unfair distribution of tokens.
+ * Collusion with real users: Malicious chatbots can collude with real users to fraudulently earn POAP tokens by providing fake proof of attendance or manipulating event data, leading to unfair distribution of tokens.
 
 
 ## 7. UBI - Universal Basic Income
@@ -106,7 +121,7 @@ How it works: Humans who wish to be included in the registry submit information 
 
 How it can be exploited: 
 
- * Chatbots could potentially attempt to bypass the protocol by using pre-recorded videos or deepfake technology to create fake video submissions that appear to be from genuine users. This could pose a potential vulnerability to the protocol if not properly addressed.
+ * Chatbots can potentially attempt to bypass the protocol by using pre-recorded videos or deepfake technology to create fake video submissions that appear to be from genuine users. This could pose a potential vulnerability to the protocol if not properly addressed.
  Considering the current limitations of chatbots and the video submission requirement of Proof of Humanity, the vulnerability of the protocol to malicious chatbots is relatively low. 
  
  
@@ -132,11 +147,11 @@ How it works: Every user has a username - when they sign up to Gitcoin grants th
 
 How it can be exploited: 
 
- * Sensitivity to username similarity: The protocol appears to rely on username similarity as a sole indicator of potential Sybil accounts. However, usernames can sometimes be similar among legitimate users due to various reasons, such as common names or naming conventions. This could potentially result in false positives or false negatives, as legitimate users with similar usernames may be flagged as potential Sybil accounts or actual Sybil accounts may go undetected if they use usernames that are not similar.
+ * Sensitivity to username similarity: The protocol appears to rely on username similarity as a sole indicator of potential Sybil accounts. However, usernames can sometimes be similar among legitimate users due to various reasons, such as common names or naming conventions. This can potentially result in false positives or false negatives, as legitimate users with similar usernames may be flagged as potential Sybil accounts or actual Sybil accounts may go undetected if they use usernames that are not similar.
 
- * Lack of additional validation factors: The protocol does not seem to consider other validation factors beyond username similarity. Malicious actors could potentially use sophisticated techniques to create usernames that appear legitimate or avoid detection by using random or unrelated usernames.
+ * Lack of additional validation factors: The protocol does not seem to consider other validation factors beyond username similarity. Malicious actors can potentially use sophisticated techniques to create usernames that appear legitimate or avoid detection by using random or unrelated usernames.
 
- * Lack of contextual awareness: The protocol does not appear to consider other contextual factors, such as user behavior, transaction history, or social network analysis, which could provide additional insights into the legitimacy of an account. This could result in potential vulnerabilities as malicious actors could potentially mimic legitimate user behavior and evade detection.
+ * Lack of contextual awareness: The protocol does not appear to consider other contextual factors, such as user behavior, transaction history, or social network analysis, which could provide additional insights into the legitimacy of an account. This could result in potential vulnerabilities as malicious actors can potentially mimic legitimate user behavior and evade detection.
 
  * Lack of dynamic updates: If the protocol does not have the capability to dynamically update the similarity thresholds or adapt to changing attack patterns, it may become obsolete over time, allowing malicious actors to evade detection.
 
@@ -151,7 +166,7 @@ How it can be exploited:
 
  * Lack of context-awareness: The protocol appears to rely solely on checking if a user has engaged in certain web3 activities within specific timeframes without considering other contextual factors. This could potentially result in false positives or false negatives, as malicious chatbots could potentially mimic legitimate user behavior within the specified timeframes or evade detection by not engaging in the expected activities.
 
- * Lack of behavioral analysis: The protocol does not seem to consider other potential behavioral analysis techniques beyond checking specific web3 activities within timeframes. Malicious chatbots could potentially use sophisticated techniques to hide their activities or mimic legitimate user behavior, leading to potential vulnerabilities.
+ * Lack of behavioral analysis: The protocol does not seem to consider other potential behavioral analysis techniques beyond checking specific web3 activities within timeframes. Malicious chatbots can potentially use sophisticated techniques to hide their activities or mimic legitimate user behavior, leading to potential vulnerabilities.
 
  * Lack of multi-factor authentication: The protocol does not appear to implement multi-factor authentication beyond checking specific web3 activities within timeframes. Malicious chatbots could potentially find ways to bypass or manipulate this single-factor authentication, leading to potential vulnerabilities.
 
@@ -174,7 +189,7 @@ How it can be exploited:
 
  * Lack of behavioral analysis: The protocol appears to rely solely on checking if a user has interacted with known money-mixers without considering other potential behavioral analysis techniques. Malicious chatbots could potentially use sophisticated techniques to hide their interactions with money-mixers or use alternative methods to obfuscate their transactions, thus evading detection.
 
- * Lack of multi-factor authentication: The protocol does not seem to consider other potential factors or implement multi-factor authentication beyond checking interactions with known money-mixers. Malicious chatbots could potentially find ways to bypass or manipulate this single-factor authentication, leading to potential vulnerabilities.
+ * Lack of multi-factor authentication: The protocol does not seem to consider other potential factors or implement multi-factor authentication beyond checking interactions with known money-mixers. Malicious chatbots can potentially find ways to bypass or manipulate this single-factor authentication, leading to potential vulnerabilities.
 
 
 ## 14. HIGH FREQUENCY TRADING
