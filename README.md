@@ -140,14 +140,12 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 **How it works:** BrightID is building an identity lego that allows users to prove to applications that they only exist once in any given system. It's one of the legos used in Gitcoin Passport. You can get 50% bonus matching for all your Gitcoin grants by joining BrightID and connecting it to your Gitcoin Passport. 
 
 **How it can be exploited:** 
-
-   *  BrightID protocol relies on users proving their uniqueness and existence through a global Turing test. While this can be effective in preventing Sybil attacks from fake accounts, it may still be vulnerable to malicious chatbots that are specifically designed to mimic human-like behavior and pass the Turing test.
   
    * Validation process: Chatbots can be used to create multiple fake accounts on BrightID by simulating human-like interactions, such as submitting videos or other required information for verification. 
   
    * Collusion: These malicious chatbots can then vouch for each other, creating a network of fake accounts that creates a false sense of legitimacy which can then be used for various malicious activities, such as gaming the system for unfair advantages or manipulating the reputation score of genuine users.
    
-   * Turing Test: While it's very hard for a chatbot to pass a Turing test, ChatGPT is quite capable of doing so under the right circumstances which indicates another vulnerability within this Lego.
+   * Turing Test: BrightID protocol relies on users proving their uniqueness and existence through a global Turing test. While it's very hard for a chatbot to pass a Turing test, ChatGPT is quite capable of doing so under the right circumstances which indicates another vulnerability within this Lego.
 
 
 ## 11. LEVENSTEIN DISTANCE
@@ -262,7 +260,7 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
    * AI Deepfakes: Chatbots can potentially attempt to bypass the protocol by using pre-recorded videos or deepfake technology to create fake video submissions that appear to be from genuine users. This could pose a potential vulnerability to the protocol if not properly addressed.
 
 
-*For UBI, BrightID and Proof of Humanity, considering the current limitations of chatbots and the video submission requirement, the vulnerability of the protocol to malicious chatbots being able to pass as humans while evidently possible is relatively low.* 
+*For UBI, BrightID and Proof of Humanity, considering the current limitations of chatbots versus Turing tests and the video submission requirement, the vulnerability of the protocol to malicious chatbots being able to pass as humans while evidently possible is relatively low.* 
  
  
  ## 19. IDENA - PROOF OF PERSON BLOCKCHAIN
