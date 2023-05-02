@@ -27,6 +27,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
  
  * False positives or false negatives: The accuracy of pattern identification using Spearman's rank correlation coefficient is not 100% accurate. A malicious use of ChatGPT can exploit this in two ways by either evading detection generating false negatives or triggering false positives that result in legitimate addresses being wrongly flagged. This messes with the grant system.
 
+**Vulnerability Score:** 5.25/10
+
 
 ## 2. FLAGGED ACTIVITY
 
@@ -39,6 +41,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
  
  * Limited scope of detection: The Lego may only consider send or receive events within the last 365 days, which may not capture all possible phishing/scam activities that could have occurred beyond that timeframe. An exploit can maneuver this loophole by using addresses that have been involved in phishing/scam activities prior to the last 365 days.
 
+**Vulnerability Score:** 5.75/10
+
 
 ## 3. SCRIPT CALL TO API
 
@@ -49,7 +53,9 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
  * "Bot-label" manipulation: A malicious use of ChatGPT can manipulate the "bot-label" or forge it to gain unauthorized access to the Passport API. This allows the user to perform actions that are not allowed or intended, leading to potential misuse or abuse of the system.
  
  * Lack of multifactor authentication: The reliance solely on the "bot-label" without additional authentication mechanisms, such as multifactor authentication or token-based authentication, also increases the vulnerability of the protocol to malicious chatbots.
- 
+
+**Vulnerability Score:** 5.75/10
+
 
 ## 4. ON-TREND/OFF-TREND
 
@@ -63,6 +69,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
  * False positives/negatives: The Lego may generate false positives or false negatives in determining whether the user's donation array falls within the statistical averages of the community. Malicious chatbots could potentially exploit these false results to gain an unfair advantage or to bypass detection. 
 
+**Vulnerability Score:** 5.75/10
+
 
 ## 5. UPALA
 
@@ -75,6 +83,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
  * Manipulation of social identity data: One can also manipulate social identity data or forge proof of identity, leading to inaccurate or fraudulent verification results.
 
  * Collusion with real users: A malicious user of ChatGPT can also collude with real users to fraudulently verify fake identities, leading to unfair distribution of trust scores and reputation within the Upala protocol.
+
+**Vulnerability Score:** 6.25/10
 
 
 ## 6. POAP - Proof Of Attendance Protocol
@@ -91,6 +101,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
  * Collusion with real users: Malicious chatbots can collude with real users to fraudulently earn POAP tokens by providing fake proof of attendance or manipulating event data, leading to unfair distribution of tokens.
 
+**Vulnerability Score:** 5.75/10
+
 
 ## 7. FUNDING WALLET IS UNIQUE
 
@@ -105,6 +117,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
  * Lack of real-time monitoring: The Lego may not have real-time monitoring capabilities, and the uniqueness of the funding wallet may be checked based on historical data, which may not be updated in real-time. This could potentially allow malicious chatbots to create or manipulate funding wallets in real-time and evade detection based on this measure.
 
  * Lack of behavioral analysis: The Lego does not seem to consider behavioral analysis of the funding wallet, such as transaction patterns or transaction destinations, which could potentially be used to detect suspicious or malicious activity. This may make the protocol vulnerable to malicious use of ChatGPT togenerate legitimate-looking transactions procedures or carry out attacks using subtle transaction patterns.
+
+**Vulnerability Score:** 6.25/10
 
 
 ## 8. SLAYSYBIL 
@@ -121,6 +135,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
  * Lack of comprehensive detection techniques: This relies solely on sequential behavior patterns and asset-transfer graph observation, without considering other potential techniques that malicious chatbots may use, such as transaction amounts, network behavior, or transaction timing. This may make the protocol vulnerable to more sophisticated attacks that do not rely solely on sequential behavior patterns or asset-transfer graph observations.
 
+**Vulnerability Score:** 6/10
+
 
 ## 9. ONCHAIN FOOTPRINT LEGO
 
@@ -134,6 +150,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
  * Lack of comprehensive detection techniques: The protocol seems to rely solely on the "transaction date mean difference" to counter Sybil attacks, without considering other potential techniques that malicious chatbots may use, such as transaction patterns, transaction amounts, or network behavior. This may make the protocol vulnerable to more sophisticated attacks that do not rely solely on transaction count-based security measures.
 
+**Vulnerability Score:** 6/10
+
 
 ## 10. BrightID
 
@@ -146,6 +164,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
    * Collusion: These malicious chatbots can then vouch for each other, creating a network of fake accounts that creates a false sense of legitimacy which can then be used for various malicious activities, such as gaming the system for unfair advantages or manipulating the reputation score of genuine users.
    
    * Turing Test: BrightID protocol relies on users proving their uniqueness and existence through a global Turing test. While it's very hard for a chatbot to pass a Turing test, ChatGPT is quite capable of doing so under the right circumstances which indicates another vulnerability within this Lego.
+
+**Vulnerability Score:** 6.25/10
 
 
 ## 11. LEVENSTEIN DISTANCE
@@ -164,6 +184,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
  * Privacy concerns: Comparing username similarity could raise privacy concerns as it may involve collecting and analyzing user data, potentially leading to potential privacy violations if not handled properly.
 
+**Vulnerability Score:** 7/10
+
 
 ## 12. ONCHAIN HISTORY
 
@@ -179,6 +201,7 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
  * Overreliance on timeframes: The Lego's reliance on specific timeframes may not be effective in detecting sophisticated malicious chatbots that are designed to operate over extended periods of time or evade detection by varying their activity patterns.
 
+**Vulnerability Score:** 7.25/10
 
 ## 13. MONEY MIXERS
 
@@ -193,6 +216,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
  * False positives/negatives: Depending on the accuracy and comprehensiveness of the list of known money-mixers, the protocol may generate false positives or false negatives. False positives may result in legitimate users being flagged as potential malicious actors, while false negatives may result in malicious chatbots evading detection.
 
  * Lack of behavioral analysis: The protocol appears to rely solely on checking if a user has interacted with known money-mixers without considering other potential behavioral analysis techniques. Malicious chatbots could potentially use sophisticated techniques to hide their interactions with money-mixers or use alternative methods like to obfuscate their transactions, thus evading detection.
+
+**Vulnerability Score:** 7.25/10
 
 
 ## 14. HIGH FREQUENCY TRADING
@@ -209,6 +234,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
  * Lack of multi-factor authentication: The Lego appears to rely solely on wallet activity timestamps and the number of transactions as indicators, without considering other potential factors or implementing multi-factor authentication. Malicious chatbots could potentially find ways to circumvent or manipulate wallet activity timestamps, leading to inaccurate results and potential vulnerabilities.
 
+**Vulnerability Score:** 6.75/10
+
 
 ## 15. SOCIAL PRESENCE
 
@@ -223,6 +250,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
  * Sensitivity to standard deviation threshold: The Lego uses a standard deviation threshold to determine if a project is within an acceptable range, which may not be robust enough to accurately identify malicious chatbot activity. A small change in the standard deviation threshold could potentially lead to false positives or false negatives, resulting in inaccurate evaluations of legitimacy.
 
  * Lack of behavioral analysis: The Lego does not seem to consider other potential behavioral analysis techniques, such as transaction patterns, transaction destinations, or other social media activity, beyond the relationship between unique donations and Twitter followers. This may make the protocol vulnerable to malicious chatbots that can mimic legitimate transaction behavior or social media activity, thus evading detection.
+
+**Vulnerability Score:** 5.75/10
 
 
 ## 16. FARMER BOOLEAN
@@ -239,6 +268,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
  * Lack of behavioral analysis: The Lego does not seem to consider behavioral analysis of the user beyond token balances and transaction values, such as transaction patterns, transaction destinations, or other on-chain activities. This may make the protocol vulnerable to malicious chatbots that can mimic legitimate transaction behavior or carry out attacks using subtle transaction patterns or destinations.
 
+**Vulnerability Score:** 6/10
+
 
 ## 17. UBI - Universal Basic Income
 
@@ -250,6 +281,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
  
  * AI Deepfakes: Another possible vulnerability is the possibility of a chatbot being able to mimic a human in the video verification process. With advances in AI and deepfakes, it may become increasingly difficult to distinguish between a real human and a bot posing as a human in a video submission. This could potentially allow for bots to fraudulently receive UBI. 
 
+**Vulnerability Score:** 4/10
+
 
 ## 18. Proof of Humanity
 
@@ -258,6 +291,8 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 **How it can be exploited:** 
 
    * AI Deepfakes: Chatbots can potentially attempt to bypass the protocol by using pre-recorded videos or deepfake technology to create fake video submissions that appear to be from genuine users. This could pose a potential vulnerability to the protocol if not properly addressed.
+
+**Vulnerability Score:** 2.25/10
 
 
 *For UBI, BrightID and Proof of Humanity, considering the current limitations of chatbots versus Turing tests and the video submission requirement, the vulnerability of the protocol to malicious chatbots being able to pass as humans while evidently possible is relatively low.* 
@@ -272,3 +307,5 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
   * Turing tests: ChatGPT has recently passed the Turing test, but chatbots being automated conversational agents, are still slightly defiecient in human characteristics neccessary for maintaining human-like interactions. While it's evidently a potential red flag, the chances of a chatbot bypassing Idena's protocol is currently low.
  
  * Proof of consensus - One of the plus points of Idena's blockchain protocol is the multifactor authentication point. This means that even if a malicious chatbot manages to pass Turing tests on a few nodes, it would need to pass the consensus of all other nodes in the network to be verified. This adds an additional layer of security!
+
+**Vulnerability Score:** 2/10
