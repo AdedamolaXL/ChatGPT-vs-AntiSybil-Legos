@@ -310,6 +310,7 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
 **Vulnerability Score:** 2/10
 
-![Sybil Table](https://user-images.githubusercontent.com/66562380/235801885-381db803-dc89-4f61-94bb-65d152b8b3e7.jpg)
+
+![Vulnerability Score vs  Lego(1)](https://user-images.githubusercontent.com/66562380/235802439-620facb6-72c6-45e9-b722-8a09ffedbb1b.png)
 
 
