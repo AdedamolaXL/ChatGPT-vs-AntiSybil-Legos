@@ -309,3 +309,7 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
  * Proof of consensus - One of the plus points of Idena's blockchain protocol is the multifactor authentication point. This means that even if a malicious chatbot manages to pass Turing tests on a few nodes, it would need to pass the consensus of all other nodes in the network to be verified. This adds an additional layer of security!
 
 **Vulnerability Score:** 2/10
+
+
+
+![Sybil Table](https://user-images.githubusercontent.com/66562380/235797817-1248169e-052f-42e2-8fad-079c09cea1f7.jpg)
