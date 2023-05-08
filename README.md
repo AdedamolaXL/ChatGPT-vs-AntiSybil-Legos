@@ -313,6 +313,12 @@ There are currently over 20 Legos within the Gitcoin system fighting sybil attac
 
 ### LEGO RANKING
 
+The average vulnerability score was evaluated over four major factors:
+ * False positives/negatives - which refers to the vulnerability of the lego to returning false positive/negative values when evaluating user accounts for sybil behaviour.
+ * Validation factor - this generally refers to the presence/absence of a multifactor authentication factor system within the lego i.e does the lego have the capacity to evaluate user accounts using more than one parameter ?
+ * Contextual awareness - this refers to the awareness of other behavioural factors of user accounts which the lego should take into consideration when evaluating sybil behaviour
+ * Real-time/Dynamic updates - this refers to the capacity of the lego do detect sybil behaviour in real time or to adapt to new behaviours in sybil attacks over a period of time.
+
 ![chart(2)](https://user-images.githubusercontent.com/66562380/236787176-2ad5fb6b-0381-49ff-bf85-2f9dc6b1dcda.png)
 
 
